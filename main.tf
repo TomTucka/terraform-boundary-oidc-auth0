@@ -4,8 +4,12 @@ resource "auth0_client" "client" {
   name                = var.name
   description         = var.description
   app_type            = "regular_web"
-  callbacks           = ["${var.boundary_url}:9200/v1/auth-methods/oidc:authenticate:callback"]
+  callbacks           = ["${var.boundary_url}/v1/auth-methods/oidc:authenticate:callback"]
   allowed_logout_urls = ["${var.boundary_url}:3000"]
+
+  jwt_configuration {
+	alg = "RS256"
+  }
 }
 
 resource "boundary_auth_method_oidc" "provider" {
@@ -16,7 +20,7 @@ resource "boundary_auth_method_oidc" "provider" {
   client_id            = auth0_client.client.client_id
   client_secret        = auth0_client.client.client_secret
   signing_algorithms   = ["RS256"]
-  api_url_prefix       = "${var.boundary_url}:9200"
+  api_url_prefix       = "${var.boundary_url}"
   is_primary_for_scope = var.is_primary_for_scope
   state                = var.state
   account_claim_maps   = var.account_claim_maps
