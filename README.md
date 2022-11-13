@@ -33,8 +33,8 @@ Terraform module configure OIDC with HashiCorp Boundary using Auth0
 
 | Name | Description |
 |------|-------------|
-| <a name="output_auth0_tentant_url"></a> [auth0\_tentant\_url](#output\_auth0\_tentant\_url) | n/a |
-| <a name="output_boundary_auth_method_id"></a> [boundary\_auth\_method\_id](#output\_boundary\_auth\_method\_id) | n/a |
+| <a name="output_auth0_tentant_url"></a> [auth0\_tentant\_url](#output\_auth0\_tentant\_url) | The tentant url used to configure OIDC. Note, doesn't include any prefixes |
+| <a name="output_boundary_auth_method_id"></a> [boundary\_auth\_method\_id](#output\_boundary\_auth\_method\_id) | The auth method id for the Auth0 OIDC connection |
 
 ## Resources
 

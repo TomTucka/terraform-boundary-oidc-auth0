@@ -23,13 +23,13 @@ variable "boudnary_scope_id" {
 variable "claims_scopes" {
   description = "A list of Claims Scopes"
   default     = []
-  type  	    = list(string)
+  type        = list(string)
 }
 
 variable "account_claim_maps" {
   description = "Account claim maps for the to_claim of sub."
   default     = []
-  type  	    = list(string)
+  type        = list(string)
 }
 
 variable "is_primary_for_scope" {
