@@ -1,0 +1,8 @@
+#!/bin/sh
+export AUTH0_DOMAIN=
+export AUTH0_CLIENT_ID=
+export AUTH0_CLIENT_SECRET=
+export BOUNDARY_ADDR=
+export TF_VAR_auth_method_id=
+export TF_VAR_password_auth_method_login_name=
+export TF_VAR_password_auth_method_password=
